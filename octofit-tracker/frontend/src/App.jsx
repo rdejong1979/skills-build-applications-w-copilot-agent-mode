@@ -1,0 +1,28 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Users from './pages/Users';
+import Teams from './pages/Teams';
+import Activities from './pages/Activities';
+import Leaderboard from './pages/Leaderboard';
+import Workouts from './pages/Workouts';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/workouts" element={<Workouts />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
+}
+
+export default App;
